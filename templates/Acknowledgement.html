@@ -1,0 +1,52 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <title>CancerML</title>
+  </head>
+  <body>
+    <div class="hero bg-opacity-50 bg-center bg-cover text-white">
+      <img
+        src="{{url_for('static',filename='bg1.jpg')}}"
+        alt=""
+        class="absolute w-[100%] h-[120vh] -z-10"
+      />
+      <nav
+        class="flex bg-transparent text-white items-center justify-between px-10"
+      >
+        <div class="text-[1.5rem] font-bold cursor-pointer">CancerML</div>
+      </nav>
+      <h1 class="pt-[3rem] mb-[1rem] text-center text-[3rem] font-bold">
+        CancerML
+      </h1>
+      <div
+        class="form-signin flex flex-col w-full justify-center items-center"
+      >
+        <div class="w-[450px] my-3">
+         <p>File uploaded successfully</p>
+         <p>File Name: {{name}}</p>
+         <p> Prediction: {{pred}} <p>
+           
+        </div>
+        <div>
+         <a href="{{ url_for('download', filename="generated.csv") }}">Download</a>
+        </div>
+    </div>
+    </div>
+    
+  </body>
+</html>
