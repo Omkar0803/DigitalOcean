@@ -4,17 +4,14 @@ from fileinput import filename
 from flask import *  
 import pickle
 import pandas as pd
-import matplotlib
-import matplotlib.pyplot as plt
 import seaborn as sns
 import io
 import os
 import base64
-from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
-import xlsxwriter
+
 
 fig,ax=plt.subplots(figsize= (6,6))
 ax=sns.set_style(style="darkgrid")
