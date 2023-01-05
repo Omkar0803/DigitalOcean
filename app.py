@@ -4,20 +4,10 @@ from fileinput import filename
 from flask import *  
 import pickle
 import pandas as pd
-import seaborn as sns
 import io
 import os
-import base64
-import matplotlib.pyplot as plt
-import seaborn as sns
 import numpy as np
 
-
-fig,ax=plt.subplots(figsize= (6,6))
-ax=sns.set_style(style="darkgrid")
-
-x=[i for i in range (100)]
-y=[i for i in range (100)]
   
 app = Flask(__name__)
 
@@ -49,7 +39,7 @@ def success():
 
         # act=actual_mean.values.flatten()
         pred=pred_mean.values.flatten()
-        print(pred)
+ 
 
         
         # #df = df.to_numpy()
